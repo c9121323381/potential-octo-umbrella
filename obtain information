@@ -1,0 +1,15 @@
+import pandas as pd
+import os
+DOCUMENT_PATH = os.path.join(".", "final-project")
+print(os.getcwd())#打印出当前工作路径 
+
+
+# 定義一個以 Pandas 讀入資料的函式
+def load_document_data(document_path=DOCUMENT_PATH):
+    csv_path = os.path.join(document_path, "ALL_16_except_X.csv")
+    #print(csv_path)
+    return pd.read_csv(csv_path)
+
+# 執行上述讀入資料的函式
+anesthesia = load_document_data()
+anesthesia_copy = load_document_data()
